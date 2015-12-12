@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+body{
+	height:100%;
+   width:100%;  
+   background-image:url("/resources/Images/background.jpg") ; 
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;/*this sets the image to fullscreen covering the whole screen*/
+}
+img{
+	width:70px;
+	height:30px;
+}
+
+.formtable {
+	width: 600px;
+	padding: 10px;
+	border: 1px solid black
+}
+
+input[type=text] {
+	width: 250px;
+}
+input[type=password] {
+	width: 250px;
+}
+
+.label {
+	text-align: right;
+	vertical-align: top;
+}
+
+.control {
+	margin-left: 10px;
+}
+
+.error {
+	font-size: small;
+	margin-left: 10px;
+	color: red;
+}
+
+.valid {
+	font-size: small;
+	margin-left: 10px;
+	color: green;
+}
