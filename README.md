@@ -1,48 +1,33 @@
-# CSE-545-Fall-2015
+## Overview
+The SouthWest Bank application is a secure online banking system (SBS) that facilitates the working of any common bank. The need of automating everything and making it available over the internet for 24 hours has led to constructing systems like this one. It has all features of a normal bank. It is demonstrated for 5 types of users, Internal Employees, Managers, Customers, Banking Administrator and Merchants.
 
-World's most secure banking system.
+The application allows external user to login and perform tasks as he would do in normal world banking application. Users can access their statements, transaction history, transfer funds to another user and debit or credit funds in their account and between their accounts. Opening a secondary bank account online and managing it is made easy using this application. The system has made it easy even for the bank employees to manage accounts of user. The government employee is also involved in the system as it’s required to access and release person’s personal information. Banking administrator is responsible for creating and managing all important accounts like regular employee, bank manager and external user and to manage the system logs.
 
-Instruction for latest database
+The system is made highly secure by implementing different security features. As, the system deals with people’s personal information as well as their funds, security is the basic necessity in this case. A complete and comprehensive all round security has been implemented in the system. This paper will talk in detail about which security features are used and how they are implemented. Some of the implemented security features are PKI, password hashing, captcha and OTP. All the required user communication is done through E-mail. All keys required to implement PKI are also enclosed in an email and sent to the user. The system is successfully implemented over the network and is functional.
 
-1. CREATE DATABASE southwesttech.
+## Security Features
+* Secure Socket Layer (SSL)
+* Public Key Infrastructure
+* One Time Password
+* Captcha
+* Virtual Keyboard
+* Role Based Authentication
+* Single Logging in One Session
+* Account Locking after 3 Unsuccessful Attempts
+* Right Click Disabled
+* Back Functionality Disabled
+* Refresh Disabled
+* SQL injection Prevention using HQL
+* Salted Hashed Password Storage
+* Front-end and Back-end Validation
+* Handling DOS Attacks in the form of TCP Syn Floods
 
-2. USE southwesttech;
-
-3. then import->
-CSE-545-Fall-2015/SQL_Scripts/TestSQL.sql
-
-4. Chnage email and username according to need in Bankuser table.
-
-
-Transaction Types->
-
-In banktransaction database if
-
-1. Both benefactor and recipient are present -> TRANSFER transaction -> OTP needed
-
-2. Only benefactor present -> DEBIT transaction -> OTP Not needed
-
-3. Only recipient present -> CREDIT transaction -> OTP Not needed
-
-4. We don't have way to track transactions like transfer from saving to checking and vice versa of own accounts. So these are not stored in tranaction table.
-
-Transaction Status Types->
-
-Refer  /BankApplication/src/com/spring/util/TransactionStatus.java
-
-	SUBMITTED(0),
-	VALIDATED(1),
-	NONVALIDATED(2),
-	APPROVED(3), 
-	DENIED(4);
-	
-	SUBMITTED -> just submited from external customer
-	
-	VALIDATED -> OTP verified status
-	
-	NONVALIDATED -> Wrong OTP verified status
-	
-	APPROVED -> When internal employee approved
-	
-	DENIED -> when internal employee reject
-	
+## Documents and Code
+* Code [[download](https://github.com/rajeshsurana/SecureBankingSystem/tree/master/BankApplication)]
+* SQL Script [[download](https://github.com/rajeshsurana/SecureBankingSystem/tree/master/deploy)]
+* Software Requirement Specification (SRS) [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/SRS.pdf)]
+* Test Plan [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/Test_Plan.pdf)]
+* User Guide [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/UserGuide_Team15.pdf)]
+* Vulnerability Report [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/SS_Vulnerability_Report_Final.pptx)]
+* Final Comprehensive Report [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/CSE545_Software_Security_Group15_Final_Project_Report.pdf)]
+* Individual Report [[download](https://github.com/rajeshsurana/SecureBankingSystem/blob/master/IndividualReportCSE545_1207633202.pdf)]
